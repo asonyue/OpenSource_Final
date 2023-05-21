@@ -5,13 +5,24 @@ let userClickedPattern= [];
 let started = false;
 let level = 0;
 
-$(document).keypress(function() {
-    if (!started) {
+// $(document).keypress(function() {
+//     if (!started) {
+//         $("#level-title").text("Level " + level);
+//         nextSequence();
+//         started = true;
+//     }
+// });
+
+$(window).on("keydown", function(event) {
+    if (event.keyCode === 13 && !started) {
+        const form = document.querySelector('form');
+        form.setAttribute('hidden', '');
         $("#level-title").text("Level " + level);
         nextSequence();
         started = true;
     }
 });
+
 
 $(".btn").click(function() {
     let userChosenColor = $(this).attr("id");
@@ -35,6 +46,10 @@ function checkAnswer(currentLevel) {
             $("body").removeClass("game-over");
         }, 200);
 
+        const levelInput = document.querySelector('#level');
+        levelInput.value = level;
+        const form2 = document.querySelector('form');
+        form2.removeAttribute('hidden');
         startOver();
     }
 }

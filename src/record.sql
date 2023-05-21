@@ -1,0 +1,6 @@
+CREATE TABLE scores (
+	id TEXT PRIMARY KEY,
+	name TEXT NOT NULL,
+	level INTEGER NOT NULL
+);
+
