@@ -1,0 +1,95 @@
+body {
+  text-align: center;
+  background: rgb(254,126,253);
+	background: linear-gradient(90deg,rgba(254,126,253,1)20%,rgba(0,212,255,1)80%);
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin:  5%;
+  color: #FEF2BF;
+}
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+
+}
+
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+
+form {
+  width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 3px solid #000000;
+  border-radius:10px;
+  background: #ffffff;
+  opacity: 1;
+}
+
+input {
+  display:block;
+  border: 2px solid #ccc;
+  background: #ccc;
+  width: 95%;
+  padding: 10px;
+  margin:10px auto;
+  border-radius: 5px;
+  outline: none;
+}
+
+label{
+  font-family: sans-serif;
+  color: #161616;
+  font-size:25px;
+  padding:10px;
+}
+
+button {
+  background-color: #888;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
