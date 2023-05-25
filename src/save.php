@@ -20,12 +20,7 @@ $html .= "<tr><th>Name</th><th>Level</th></tr>\n";
 
 $i = 0;
 while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-    $i++;
-    if ($i % 2 == 0) {
-        $html .= "<tr class='even-row' style='background-color: #f2f2f2;'><td>" . $row['name'] . "</td><td>" . $row['level'] . "</td></tr>\n";
-    } else {
-        $html .= "<tr class='odd-row' style='background-color: #ffffff;'><td>" . $row['name'] . "</td><td>" . $row['level'] . "</td></tr>\n";
-    }
+    $html = getHtml($i, $row, $html);
 }
 
 $html .= "</table>\n";

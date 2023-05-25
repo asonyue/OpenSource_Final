@@ -1,3 +1,33 @@
+<style>
+
+    .score-table {
+        border-collapse: collapse;
+        width: 20%;
+        margin-bottom: 20px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
+    .score-table th, .score-table td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    .score-table th {
+        background: rgb(254,126,253);
+        background: linear-gradient(90deg,rgba(254,126,253,1)20%,rgba(0,212,255,1)80%);
+        color: white;
+    }
+
+    .score-table td {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333333;
+    }
+</style>
 <?php
 
 require_once "db_conn.php";
@@ -11,8 +41,25 @@ $db = new PDO('mysql:host=localhost;dbname=record', 'root', '');
 $sql1 = "INSERT INTO scores (id, name, level) VALUES ('$id', '$name', '$level')";
 
 if (!($db->exec($sql1))) {
-  error_log("Error: Insert Unsucessful");
-} 
+  error_log("Error: Insert Unsuccessful");
+}
+
+/**
+ * @param $i
+ * @param $row
+ * @param $html
+ * @return string
+ */
+function getHtml($i, $row, $html)
+{
+    $i++;
+    if ($i % 2 == 0) {
+        $html .= "<tr class='even-row' style='background-color: #f2f2f2;'><td>" . $row['name'] . "</td><td>" . $row['level'] . "</td></tr>\n";
+    } else {
+        $html .= "<tr class='odd-row' style='background-color: #ffffff;'><td>" . $row['name'] . "</td><td>" . $row['level'] . "</td></tr>\n";
+    }
+    return $html;
+}
 
 try {
 
@@ -27,12 +74,7 @@ try {
   // Iterate over the results and add them to the table
   $i = 0;
   while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-    $i++;
-    if ($i % 2 == 0) {
-      $html .= "<tr class='even-row' style='background-color: #f2f2f2;'><td>" . $row['name'] . "</td><td>" . $row['level'] . "</td></tr>\n";
-    } else {
-      $html .= "<tr class='odd-row' style='background-color: #ffffff;'><td>" . $row['name'] . "</td><td>" . $row['level'] . "</td></tr>\n";
-    }
+      $html = getHtml($i, $row, $html);
   }
 
   // Close the table
@@ -50,7 +92,7 @@ try {
                 LIMIT 5
             );";
   if (!($db->exec($sql3))) {
-    error_log("Error: Delete Unsucessful");
+    error_log("Error: Delete Unsuccessful");
   }
 
   // Close the database connection
@@ -61,53 +103,11 @@ catch (PDOException $e) {}
 
 ?>
 
-<style>
 
-#container {
-	width: 200px;
-	height: auto;
-}
-
-.score-table {
-  border-collapse: collapse;
-  width: 20%;
-  margin-bottom: 20px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-}
-
-.score-table th, .score-table td {
-  text-align: left;
-  padding: 8px;
-}
-
-.score-table th {
-  background: rgb(254,126,253);
-	background: linear-gradient(90deg,rgba(254,126,253,1)20%,rgba(0,212,255,1)80%);
-  color: white;
-}
-
-.score-table tr.even-row {
-  background-color: #f2f2f2;
-}
-
-.score-table tr.odd-row {
-  background-color: #ffffff;
-}
-
-.score-table td {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333333;
-}
-</style>
 
 
 <!DOCTYPE html>
-<html>
+<html lang="">
 <button onclick="window.location.href='index.html'">Retry?</button>
 </html>
 
@@ -117,7 +117,7 @@ body {
   background: rgb(254,126,253);
 	background: linear-gradient(90deg,rgba(254,126,253,1)20%,rgba(0,212,255,1)80%);
 	justify-content: center;
-	align-items: bottom;
+	align-items: end;
 	flex-direction: column;
 }
 button{
