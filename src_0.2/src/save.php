@@ -50,7 +50,7 @@ if (!($db->exec($sql1))) {
  * @param $html
  * @return string
  */
-function getHtml($i, $row, $html)
+function getHtml($i, $row, $html): string
 {
     $i++;
     if ($i % 2 == 0) {
