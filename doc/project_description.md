@@ -1,13 +1,14 @@
 
-# Project Goal and Description
+# Documentation for Goal, Functionality, and Architecture
 
 ## Goal
 
 The goal is to make a sequence memory game webapp with a top 5 leaderboard.
 
-## Functionality
+## Functions
 
-- User presses enter key to start game.  
+- User is prompted to press enter.
+- Game starts once user presses enter on their keyboard.  
 - There are 4 different colored boxes in which one is randomly selected to flash once per level.  
 - The player starts at level 1 and levels up when he repeats the sequence correctly by clicking on the correct boxes.
 - If the player clicks incorrectly, the game will end.  
@@ -17,3 +18,7 @@ The goal is to make a sequence memory game webapp with a top 5 leaderboard.
 - Only the first 5 data in the database is kept.
 - A top five leaderboard will be shown.  
 - The player can choose to retry by clicking on the retry button.
+
+## Software architecture
+
+-
