@@ -1,6 +1,10 @@
 body {
   text-align: center;
-  background-color: #011F3F;
+  background: rgb(254,126,253);
+	background: linear-gradient(90deg,rgba(254,126,253,1)20%,rgba(0,212,255,1)80%);
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 #level-title {
@@ -50,4 +54,42 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+
+form {
+  width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 3px solid #000000;
+  border-radius:10px;
+  background: #ffffff;
+  opacity: 1;
+}
+
+input {
+  display:block;
+  border: 2px solid #ccc;
+  background: #ccc;
+  width: 95%;
+  padding: 10px;
+  margin:10px auto;
+  border-radius: 5px;
+  outline: none;
+}
+
+label{
+  font-family: sans-serif;
+  color: #161616;
+  font-size:25px;
+  padding:10px;
+}
+
+button {
+  background-color: #888;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
