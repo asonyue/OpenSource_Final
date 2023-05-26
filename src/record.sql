@@ -1,19 +1,5 @@
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-
-CREATE TABLE scores
-(
-    'id'    varchar(255) NOT NULL,
-    'name'  varchar(255) NOT NULL,
-    'level' varchar(255) NOT NULL
-) ENGINE = InnoDB
-  DEFAULT CHARSET = latin1;
-
-ALTER TABLE 'scores'
-    ADD PRIMARY KEY ('id');
-
-ALTER TABLE 'scores'
-    MODIFY 'id' int(11) NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 3;
-COMMIT;
+CREATE TABLE scores (
+	id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+	name VARCHAR(255) NOT NULL,
+	level VARCHAR(255) NOT NULL
+);
