@@ -18,10 +18,10 @@
         background: linear-gradient(90deg,rgba(254,126,253,1)20%,rgba(0,212,255,1)80%);
         font-size:30px;
       
-        position: absolute;
-        bottom:25%;
-        left:50%;
-        transform: translate(-50%, -50%);
+        margin: 0 auto;
+        width: 20%;
+        top: 10%;
+        transform: translateY(1000%);
       
         color: white;
         padding: 10px;
@@ -32,36 +32,36 @@
     </style>
 </head>
 <body>
-    <button onclick="window.location.href='index.html'">Retry?</button>
+    <button onclick="window.location.href='index.html'">Retry</button>
 </body>
 </html>
 
 <style>
 #container {
   width: 200px;
-  height: auto;
+  height: 200px;
 }
 
 .score-table {
   border-collapse: collapse;
+  margin: 0 auto;
   width: 20%;
-  margin-bottom: 20px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  top: 10%;
+  transform: translateY(100%);
 }
 
 .score-table th,
 .score-table td {
   text-align: left;
   padding: 8px;
+  align-items: center;
 }
 
 .score-table th {
   background: rgb(254, 126, 253);
   background: linear-gradient(90deg, rgba(254, 126, 253, 1)20%, rgba(0, 212, 255, 1)80%);
+  align-items: center;
+  justify-content: center;
   color: white;
 }
 
