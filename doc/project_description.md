@@ -19,4 +19,5 @@
 
 ## Database (MySQL)
 
-- The database will only store the first five result and delete the rest everytime the php file executes.
+- The database will only store the first five result and delete the rest everytime the php file executes.  
+- Using MySQL dialect.

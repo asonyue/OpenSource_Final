@@ -21,3 +21,19 @@ The goal is to make a sequence memory game webapp with a top 5 leaderboard.
 - Only the first 5 data in the database is kept.
 - A top five leaderboard will be shown.
 - The player can choose to retry by clicking on the retry button.
+
+# Getting Started
+
+## Prerequisites  
+
+- Apache2  
+`sudo apt install apache2`  
+- MySQL  
+`sudo apt install mysql-server`  
+
+## User Manual  
+
+Press enter to start the game. Follow the flashing boxes. Everytime you level up, one more pattern will be added.  
+If you mis-click, you lose. Type in your name in the textbox. You will then be shown the top 5 leaderboard. Press the  
+retry button to try again.
+  
