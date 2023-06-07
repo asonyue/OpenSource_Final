@@ -22,14 +22,37 @@ The goal is to make a sequence memory game webapp with a top 5 leaderboard.
 - A top five leaderboard will be shown.
 - The player can choose to retry by clicking on the retry button.
 
-# Getting Started
+# Getting Started  
 
-## Prerequisites  
+## Installation Manual
 
-- Apache2  
-`sudo apt install apache2`  
-- MySQL  
-`sudo apt install mysql-server`  
+ 1. `sudo apt install mysql-server`
+ 2. `mysql --version`
+ 3. `sudo mysql`
+ 4. `SHOW VARIABLES LIKE 'validate_password';`
+ 5. `use mysql`
+ 6. `select user, plugin, host FROM mysql.user;`
+ 7. `ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'newpassword';`
+ 8. FLUSH PRIVILEGES
+ 9. `\q`
+ 10. `sudo mysql -uroot -p`
+ 11. `select user, authentication_string, plugin, host FROM mysql.user;`
+ 12. `\q`
+
+ 1. sudo apt install phpmyadmin
+ 2. Choose apach2 server option
+ 3. Enter the MYSQL application password as 'newpassword'
+ 4. Reenter the password again
+ 5. sudo service apache2 restart
+ 6. sudo service apache2 status
+ 7. Open a browser, in the url section, please type 'localhost/phpmyadmin'
+ 8. In the username field, type 'root'
+ 9. In the password field, type 'newpassword'
+ 
+ 1. Press the Database Section button
+ 2. Enter the database name 'record' and press create
+ 3. Navigate to the SQL section in the site
+ 4. Copy and paste the SQL command provided by the file on the github pages 'record.sql' file
 
 ## User Manual  
 
