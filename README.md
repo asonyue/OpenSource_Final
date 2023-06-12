@@ -8,7 +8,7 @@ In the open source project, we are developing an interactive game web app using 
 
 The goal is to make a sequence memory game webapp with a top 5 leaderboard.  
 
-## Functions  
+## Functions (User Manual)
 
 - User is prompted to press enter.
 - Game starts once user presses enter on their keyboard.
@@ -26,6 +26,14 @@ The goal is to make a sequence memory game webapp with a top 5 leaderboard.
 
 ## Installation Manual
 
+##### Apache2 Server
+ 1. `sudo apt install apache2`
+ 2. Navigate to the directory `cd var/www/html`
+ 3. Create a folder under this directory e.g game
+ 4. Move the files all from the src folder provided from github, excluding the src folder itself into the directory.
+ 5. `service apache2 reload`
+
+##### Mysql Server
  1. `sudo apt install mysql-server`
  2. `mysql --version`
  3. `sudo mysql`
@@ -39,24 +47,18 @@ The goal is to make a sequence memory game webapp with a top 5 leaderboard.
  11. `select user, authentication_string, plugin, host FROM mysql.user;`
  12. `\q`
 
- 1. sudo apt install phpmyadmin
+##### Phpmyadmin
+ 1. `sudo apt install phpmyadmin`
  2. Choose apach2 server option
  3. Enter the MYSQL application password as 'newpassword'
  4. Reenter the password again
- 5. sudo service apache2 restart
- 6. sudo service apache2 status
+ 5. `sudo service apache2 restart`
+ 6. `sudo service apache2 status`
  7. Open a browser, in the url section, please type 'localhost/phpmyadmin'
  8. In the username field, type 'root'
  9. In the password field, type 'newpassword'
- 
- 1. Press the Database Section button
- 2. Enter the database name 'record' and press create
- 3. Navigate to the SQL section in the site
- 4. Copy and paste the SQL command provided by the file on the github pages 'record.sql' file
+ 10. Press the Database Section button
+ 11. Enter the database name 'record' and press create
+ 12. Navigate to the SQL section in the site
+ 13. Copy and paste the SQL command provided by the file on the github pages 'record.sql' file
 
-## User Manual  
-
-Press enter to start the game. Follow the flashing boxes. Everytime you level up, one more pattern will be added.  
-If you mis-click, you lose. Type in your name in the textbox. You will then be shown the top 5 leaderboard. Press the  
-retry button to try again.
-  
