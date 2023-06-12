@@ -32,7 +32,7 @@ to compete with your friends, family members and colleagues in your free time.
 - `use mysql`
 - `select user, plugin, host FROM mysql.user;`
 - `ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'newpassword';`
-- FLUSH PRIVILEGES
+- `FLUSH PRIVILEGES`
 - `\q`
 - `sudo mysql -uroot -p`
 - `select user, authentication_string, plugin, host FROM mysql.user;`
