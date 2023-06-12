@@ -3,6 +3,7 @@
 
 In the open source project, we are developing an interactive game web app using 3-tier architecture.  
 [Progress Report](https://docs.google.com/presentation/d/1pnucE4IeUbuw6zmf1bAe1A6U_1m0hYKxIJ7IIfzFKus/edit?usp=sharing)
+[Progress Report 2](https://docs.google.com/presentation/d/1iZW16ctSKo_PPZF3NEzpBi6CLAMlOW3ueUZQg2FF61E/edit?usp=sharing)
 
 ## Goal  
 
